@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background: #7693c1;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 405px;
+  margin: 135px auto;
+  background: #fff;
+  border-radius: 7px;
+  padding: 30px 0;
+}
+
+.task-input {
+  height: 52px;
+  padding: 0 25px;
+}
+
+.task-input img {
+  position: absolute;
+  top: 50%;
+  transform: translate(17px, -50%);
+}
+
+.task-input input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0 20px 0 53px;
+}
+
+.task-input input::placeholder {
+  color: #bfbfbf;
+}
+
+.controls,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  padding: 20px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filters span {
+  cursor: pointer;
+  margin: 0 8px;
+  font-size: 16px;
+}
+
+.filters span.active {
+  color: #3c87ff;
+}
+
+
+.controls .clear-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 14px;
+  background: #3c87ff;
+}
+
+.task-box {
+  margin: 20px 25px;
+}
+
+.task-box .task {
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-box .task:last-child {
+  /* margin-bottom: 0; */
+  /* border-bottom: 0; */
+  /* padding-bottom: 0; */
+  /* color: red; */
+}
+.task label {
+  display: flex;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+}
+
+.task label input {
+  /* margin-top: 6px; */
+  margin-right: 14px;
+}
+
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .task-menu {
+  position: absolute;
+  padding: 5px 0;
+  z-index: 5;
+  transform: scale(0);
+  border-radius: 5px;
+  right: -5px;
+  bottom: -60px;
+  background: #fff;
+  transition: transform 0.5s ease;
+  transform-origin: top right;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.settings span {
+  font-size: 30px;
+}
+
+.task-menu li {
+  height: 25px;
+  padding: 17px 15px;
+  font-size: 15px;
+  margin-bottom: 1px;
+  justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.task-menu li:hover {
+  background: #f5f5f5;
+}
+
+.task-menu li i {
+  padding-right: 18px;
+}
